@@ -1,9 +1,0 @@
-Test Case ID | Title | Method | Endpoint | Input | Steps | Expected Result
-TC_PET_001 | Create new pet | POST | /pet | Valid JSON body | Send POST request | Status 200 & returns id
-TC_PET_002 | Create pet without body | POST | /pet | empty body | Send POST request | Status 400
-TC_PET_003 | Get pet by ID | GET | /pet/{id} | valid id | Send GET request | Status 200 & returns pet
-TC_PET_004 | Invalid pet ID | GET | /pet/999999 | invalid id | Send GET request | Status 404
-TC_PET_005 | Update pet | PUT | /pet | updated JSON | Send PUT request | Status 200 & updated info
-TC_PET_006 | Update pet missing name | PUT | /pet | missing name | Send PUT request | Status 400
-TC_PET_007 | Delete pet | DELETE | /pet/{id} | valid id | Send DELETE request | Status 200
-TC_PET_008 | Delete invalid pet | DELETE | /pet/999999 | invalid id | Send DELETE request | Status 404
