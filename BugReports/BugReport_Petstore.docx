@@ -1,1 +1,77 @@
+🐞 Petstore API – Bug Report (Real & Professional)
+
+
+---
+
+BUG_001 – GET /pet/{id} returns 200 for non-existing pet
+
+Severity: Major
+Priority: High
+
+Steps to Reproduce:
+
+Send GET request to /pet/999999999
+
+Observe the response
+
+
+Expected Result:
+
+API should return Status 404 with message: "Pet not found"
+
+Actual Result:
+
+API returns Status 200 with empty or incorrect body
+
+
+---
+
+BUG_002 – POST /pet accepts empty body
+
+Severity: Critical
+Priority: High
+
+Steps to Reproduce:
+
+Send POST request to /pet with empty body {}
+
+Check validation behavior
+
+
+Expected Result:
+
+API should return Status 400 – missing required fields
+
+Actual Result:
+
+API returns Status 200 and creates an invalid pet record
+
+
+---
+
+BUG_003 – PUT /pet updates pet without required fields
+
+Severity: Medium
+Priority: Medium
+
+Steps to Reproduce:
+
+Send PUT request to /pet with only:
+
+
+{
+  "id": 1001
+}
+
+Observe behavior
+
+
+Expected Result:
+
+API should return Status 400 – required fields (name, status) missing
+
+Actual Result:
+
+API returns Status 200 and accepts incomplete data
+
 
